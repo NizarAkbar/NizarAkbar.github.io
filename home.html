@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .destination {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .destination:hover {
+            background: #e0e0e0;
+        }
+        #details {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Destinasi Wisata</h1>
+    <div class="destination" onclick="showDetails('Bali', 'Pantai, budaya, dan keindahan alam yang luar biasa.')">
+        Bali
+    </div>
+    <div class="destination" onclick="showDetails('Yogyakarta', 'Kota budaya dengan banyak candi dan seni.')">
+        Yogyakarta
+    </div>
+    <div class="destination" onclick="showDetails('Jakarta', 'Ibukota Indonesia dengan banyak tempat menarik.')">
+        Jakarta
+    </div>
+    <div class="destination" onclick="showDetails('Lombok', 'Pulau indah dengan pantai yang menakjubkan.')">
+        Lombok
+    </div>
+    
+    <div id="details"></div>
+
+    <script>
+        function showDetails(name, description) {
+            const details = document.getElementById('details');
+            details.innerHTML = `<h2>${name}</h2><p>${description}</p>`;
+            details.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
